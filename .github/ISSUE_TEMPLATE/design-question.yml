@@ -1,0 +1,53 @@
+name: 設計論点 / Design Question
+description: 基本設計フェーズの未決事項・要判断の論点を起票します。 / Open a design question or decision to be made.
+title: "[論点] "
+labels: ["type:question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        未決事項は Issue で管理し、決定は ADR（`docs/adr/`）と `docs/` に記録します。
+        Open questions are tracked here; decisions are recorded in ADRs and `docs/`.
+  - type: textarea
+    id: question
+    attributes:
+      label: 論点 / Question
+      description: 何を決める必要があるか。 / What needs to be decided?
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: 選択肢 / Options
+      description: 考えられる案とそれぞれの概要。 / Candidate options and a brief outline of each.
+    validations:
+      required: false
+  - type: textarea
+    id: considerations
+    attributes:
+      label: 判断材料 / Considerations
+      description: 判断に必要な情報・制約・トレードオフ。 / Information, constraints, and trade-offs needed to decide.
+    validations:
+      required: false
+  - type: dropdown
+    id: area
+    attributes:
+      label: 影響領域 / Affected Area
+      description: 主に関係する領域（複数可）。 / Which area(s) this mainly affects.
+      multiple: true
+      options:
+        - 3D モデリング / 3D Modeling
+        - 法適合性照合 / Legal Compliance
+        - 消費エネルギー計算 / Energy Calculation
+        - 構造計算 / Structural Calculation
+        - アーキテクチャ全体 / Overall Architecture
+        - その他 / Other
+    validations:
+      required: false
+  - type: textarea
+    id: references
+    attributes:
+      label: 関連ドキュメント / Related Documents
+      description: 関係する docs/ の文書や他の Issue へのリンク。 / Links to related docs or issues.
+    validations:
+      required: false
