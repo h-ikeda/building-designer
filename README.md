@@ -24,15 +24,13 @@ yet.
 
 ---
 
-## 対象機能スコープ（暫定）/ Feature Scope (tentative)
+## 対象機能スコープ / Feature Scope
 
-> ⚠️ **暫定・可変** — 以下は現時点の候補です。今後の検討で追加・統合・削除される
-> 可能性があります。確定した内容だけを `docs/` に、検討中の論点は
-> [GitHub Issues](https://github.com/h-ikeda/building-designer/issues) に記録します。
->
-> ⚠️ **Tentative and subject to change** — the list below reflects current candidates only.
-> Items may be added, merged, or dropped as design proceeds. Only decided matters live in
-> `docs/`; open questions are tracked in [GitHub Issues](https://github.com/h-ikeda/building-designer/issues).
+以下の 4 領域を対象とすることが確定しています（[ADR-0003](./docs/adr/0003-initial-target-scope-and-methods.md)）。
+細部の論点は [GitHub Issues](https://github.com/h-ikeda/building-designer/issues) で追跡します。
+
+The four areas below are confirmed ([ADR-0003](./docs/adr/0003-initial-target-scope-and-methods.md)).
+Finer questions are tracked in [GitHub Issues](https://github.com/h-ikeda/building-designer/issues).
 
 | 領域 / Area | 目的 / Purpose |
 | --- | --- |
@@ -40,6 +38,20 @@ yet.
 | 法適合性照合 / Legal Compliance | 建築基準法などの日本の法令・基準への適合性を照合する。 |
 | 消費エネルギー計算 / Energy Calculation | 省エネ基準等に基づき建物の消費エネルギーを計算・評価する。 |
 | 構造計算 / Structural Calculation | 構造関係規定に基づき部材・架構の構造安全性を検証する。 |
+
+### 初期対象と手法 / Initial target & methods
+
+まずは小規模建築物から着手し、段階的にあらゆる建物へ拡張します。差し当たりの到達目標は、
+**確認申請が比較的容易な延べ面積 300㎡以下の木造軸組構法 2 階建て**を一通り設計できること
+です。構造は**ルート 1（許容応力度計算）**、省エネは**性能計算**を基本とし、仕様規定に
+依存しない方針です。詳細は [ADR-0003](./docs/adr/0003-initial-target-scope-and-methods.md) と
+[`docs/domains/`](./docs/domains/) を参照してください。
+
+We start with small buildings and expand to all building types over time. The initial target is
+to fully design a **two-story timber post-and-beam house of 300㎡ or less** (a relatively simple
+building-confirmation case), using **Route 1 (allowable stress design)** for structure and
+**performance-based calculation** for energy — not spec-based provisions. See
+[ADR-0003](./docs/adr/0003-initial-target-scope-and-methods.md) and [`docs/domains/`](./docs/domains/).
 
 ---
 

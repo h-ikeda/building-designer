@@ -33,3 +33,4 @@ design decision was made, so the reasoning can be traced later (Michael Nygard s
 | --- | --- | --- |
 | [0001](./0001-record-architecture-decisions.md) | ADR で設計判断を記録する / Record architecture decisions in ADRs | Accepted |
 | [0002](./0002-track-open-questions-as-github-issues.md) | 未決事項は GitHub Issues で管理する / Track open questions as GitHub Issues | Accepted |
+| [0003](./0003-initial-target-scope-and-methods.md) | 初期対象スコープと設計手法の方針 / Initial target scope and design methods | Accepted |

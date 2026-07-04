@@ -30,7 +30,17 @@ Web application vs. local application. This choice affects the entire design flo
 How the feature areas (3D modeling, legal compliance, energy calculation, structural
 calculation) are decomposed and how they relate to each other.
 
-- **状態 / Status:** 未確定 / Undecided — 関連 Issue を参照 / see related Issue.
+- **状態 / Status:** 領域の依存関係のみ確定 / Dependencies decided
+  （[ADR-0003](./adr/0003-initial-target-scope-and-methods.md)）。細部は未確定。
+- 共有ドメインモデルを基盤とし、3D モデリング（入力）がこれを構築、構造・法適合性・
+  省エネの各機能がこれを入力として参照する。実装順序の目安も同順。
+
+  ```
+  共有ドメインモデル ─┬─▶ 3D モデリング（入力UI）
+                      ├─▶ 構造計算（ルート1）
+                      ├─▶ 法適合性照合（採光・換気・集団規定）
+                      └─▶ 省エネ計算（外皮・一次エネルギー）
+  ```
 
 ---
 
